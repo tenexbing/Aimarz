@@ -1,0 +1,15 @@
+// Screen
+// ======
+
+@import "grids";
+
+@import "Base/normalize";
+
+// compass 重置
+@import "compass/reset";
+
+@import "Base/_mixin";
+@import "Base/_layout";
+
+@import "_header";
+@import "_footer";
