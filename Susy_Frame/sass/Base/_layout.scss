@@ -1,23 +1,20 @@
 // CSS3 效果
-@import"compass/css3/box-shadow";
 body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "微軟正黑體",Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 0.95em;
 }
 a {
     color: #2F2F2F;
     text-decoration: none;
+    font-family: "微軟正黑體",Arial, "Helvetica Neue", Helvetica, sans-serif;
     &:hover {
         color: #0F7597;
     }
 }
-.wrap-wide {
-    width: 1400px;
-    margin: 0 auto;
-}
+
 .main {
     min-height: 300px;
-    padding: 10px;
+    // padding: 10px;
 }
 // ???
 input {
@@ -25,4 +22,20 @@ input {
     padding: 5px 30px 5px 5px;
     font-size: 0.85em;
     color: #b5b5b5;
+}
+// 框架
+.wrap-wide {
+    @include _break("mobile") {
+        @include container();
+        height: 100%;
+    }
+    @include _break("pad") {
+        @include container();
+    }
+    @include _break("desktop") {
+        @include container();
+    }
+}
+.wrap-wide {
+    height: 100%;
 }

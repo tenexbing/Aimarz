@@ -1,3 +1,6 @@
+.header_bg{
+    background-color: #0a0a0a;
+}
 .header {
     background-color: #0a0a0a;
     height: 110px;
@@ -49,21 +52,21 @@
                 width: 35px;
                 height: 35px;
                 display: block;
-                &.icon01 {
-                    background: url(../images/social01.png) 0 0 no-repeat;
-                }
-                &.icon02 {
-                    background: url(../images/social02.png) 0 0 no-repeat;
-                }
-                &.icon03 {
-                    background: url(../images/social03.png) 0 0 no-repeat;
-                }
-                &.icon04 {
-                    background: url(../images/social04.png) 0 0 no-repeat;
-                }
             }
         }
     }
+}
+.icon-fb {
+    background: url(../images/social01.png) 0 0 no-repeat;
+}
+.icon-si {
+    background: url(../images/social02.png) 0 0 no-repeat;
+}
+.icon-pi {
+    background: url(../images/social03.png) 0 0 no-repeat;
+}
+.icon-yo {
+    background: url(../images/social04.png) 0 0 no-repeat;
 }
 .header__navLinks {
     ul {

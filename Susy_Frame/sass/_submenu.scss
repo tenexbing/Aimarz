@@ -1,0 +1,72 @@
+/*主要選單*/
+
+.submenu {
+    margin-top: 36px;
+    ul {
+        overflow: hidden;
+        li {
+            float: left;
+            margin: 0 10px 10px 0;
+            &:after {
+                content: "|";
+                display: inline-block;
+            }
+            a {
+                font-size: 0.85em;
+                color: #313131;
+                padding: 10px;
+                display: inline-block;
+            }
+        }
+    }
+}
+.li-no {
+    &:after {
+        display: none !important;
+    }
+}
+.focus-tangerine {
+    background-color: #ec6941;
+    a {
+        color: #fff!important;
+    }
+}
+.focus-black {
+    background-color: #000;
+    a {
+        color: #fff!important;
+    }
+}
+.secmenu {
+    border-top: 1px dotted #b7b7b7;
+    border-bottom: 1px dotted #b7b7b7;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    ul {
+        overflow: hidden;
+        li {
+
+            @include _break("desktop") {
+                @include gallery(3 of 12);
+                float: left;
+            }
+            a{
+                background:url(../images/icon-sec.jpg) 10px 6px no-repeat;
+                padding-left: 40px;
+                display: block;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+.mo-title{
+    font-weight: 700;
+    color: #707070;
+    display: block;
+    font-size: 0.8em;
+}
+.mo-text{
+    display: block;
+    color: #b5b5b5;
+    font-size:0.8em;
+}

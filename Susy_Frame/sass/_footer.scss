@@ -6,20 +6,17 @@
         overflow: hidden;
     }
 }
+
 .footer__links {
     float: left;
     margin-left: 120px;
-    ul {
-        li {
-            float: left;
-            margin-right: 90px;
-        }
-    }
-    ol {
+    dl {
+        float: left;
+        margin-right: 90px;
         overflow: hidden;
         border-left: solid 1px #a0a0a0;
         padding-left: 10px;
-        li {
+        dd {
             clear: both;
             margin: 4px 0;
             a {
