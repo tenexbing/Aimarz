@@ -1,0 +1,109 @@
+// SUSY 設定
+// ----
+// Sass (v3.3.14)
+// Compass (v1.0.1)
+// Breakpoint (v2.5.0)
+// Susy (v2.1.3)
+// ----
+
+// 基礎SUSY 設定檔   非必要請勿更動-------------->
+
+@import "breakpoint";  
+
+
+// Requiremen8ts
+// ============
+
+@import "susy";
+
+
+//使用 map setting
+$susy: (
+    flow: ltr,
+    math: fluid,
+    output: float,
+    gutter-position: after,
+    container: auto,
+    container-position: center,
+    columns: 20px,
+    gutters: 1/4,
+    column-width: 96px, //這裡使用固定柵欄寬度，預設是 false
+    global-box-sizing: content-box, 
+    last-flow: to,
+    debug: (
+        image: hide, //開發時使用show可看到柵欄，使用hide關閉柵欄顯示
+        color: rgba(#66f, .25),
+        output: background,
+        toggle: top right,
+    ),
+    use-custom: (
+        background-image: true,
+        background-options: false,
+        box-sizing: true, 
+        clearfix: false,
+        rem: true,
+    )
+);
+
+
+//設定三種尺寸
+$mobile_break   : 0px 460px;
+$mobile_layout  : 4;
+
+$pad_break      : 461px 960px;
+$pad_layout     : 12;
+
+$desktop_break  : 961px;
+$desktop_layout : 12;
+
+
+
+//
+// 自訂一個mixin, 快速依照版面顯示不同的 style
+// 
+// @type string    mobile | pad | desktop
+//
+@mixin _break($break:mobile)
+{
+    
+    @if ($break == "mobile")
+    {
+        //套用 _grids2.scss 所設定的斷點px 與 柵欄數
+        @include susy-breakpoint($mobile_break, $mobile_layout)
+        {
+            @content;
+        }  
+    } 
+
+    @else if ($break == "pad")
+    {
+        @include susy-breakpoint($pad_break, $pad_layout)
+        {
+            @content;
+        }
+    }
+
+    @else if ($break == "desktop")
+    {
+        @include susy-breakpoint($desktop_break, $desktop_layout)
+        {
+            @content;
+        }
+    }
+    
+}
+
+
+
+
+
+*
+{
+    //CSS3的功能，建議所有元素都使用吧！
+    @include box-sizing(border-box);
+}
+    
+html, body 
+{
+    height: 100%;
+}
