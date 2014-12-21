@@ -1,5 +1,7 @@
 // css片段
-// 
+$all-g:10px;
+
+
 // 文字隱藏
 @mixin text-hide() {
     font: 0/0 a;
@@ -11,4 +13,12 @@
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     overflow: hidden;
+}
+@mixin socialLinks-icon($name) {
+    $url:"../images/#{$name}.png";
+    background: url($url) 0 0 no-repeat;
+    width: 35px;
+    height: 35px;
+    display: block;
+    @include text-hide;
 }

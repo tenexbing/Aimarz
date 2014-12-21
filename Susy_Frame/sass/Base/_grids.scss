@@ -27,11 +27,11 @@ $susy: (
     container-position: center,
     columns: 20px,
     gutters: 1/4,
-    column-width: 96px, //這裡使用固定柵欄寬度，預設是 false
+    column-width: 80px, //這裡使用固定柵欄寬度，預設是 false
     global-box-sizing: content-box, 
     last-flow: to,
     debug: (
-        image: hide, //開發時使用show可看到柵欄，使用hide關閉柵欄顯示
+        image: 用show, //開發時使用show可看到柵欄，使用hide關閉柵欄顯示
         color: rgba(#66f, .25),
         output: background,
         toggle: top right,

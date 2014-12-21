@@ -38,4 +38,5 @@ input {
 }
 .wrap-wide {
     height: 100%;
+    @include gutters(2em inside); // 往內 5em 白
 }

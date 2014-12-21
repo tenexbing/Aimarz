@@ -1,74 +1,62 @@
-.header_bg{
+.header_bg {
     background-color: #0a0a0a;
-}
-.header {
-    background-color: #0a0a0a;
-    height: 110px;
     .wrap-wide {
         position: relative;
     }
 }
-.header__logo {
-    padding-top: 20px;
-    h1 {
-        float: left;
-        a {
-            @include text-hide;
-            display: block;
-            background: url(../images/logo.png) 0 0 no-repeat;
-            width: 164px;
-            height: 57px;
-        }
+.logo {
+    margin-top: 28px;
+    margin-bottom: 23px;
+    float: left;
+    a {
+        @include text-hide;
+        display: block;
+        background: url(../images/logo.png) 0 0 no-repeat;
+        width: 164px;
+        height: 57px;
     }
 }
-.header__productSearch {
+.productSearch {
     position: absolute;
-    top: 20px;
-    right: 200px;
+    top: 17px;
+    right: 290px;
 }
-.header__socialLinks {
+.socialLinks {
+    margin-top: 15px;
     float: right;
 }
 .searchbt1 {
     float: right;
-    a {
-        @include text-hide;
-        background: url(../images/search_ico.gif) 0 0 no-repeat;
-        width: 16px;
-        height: 16px;
-        display: block;
-        position: absolute;
-        top: 5px;
-        right: 10px;
-    }
+    background: url(../images/search_ico.gif) 0 0 no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    @include text-hide;
 }
-.header__socialLinks {
+.socialLinks {
     ul {
         li {
             float: left;
             margin-right: 10px;
-            a {
-                @include text-hide;
-                width: 35px;
-                height: 35px;
-                display: block;
-            }
         }
     }
+    &__icon-fb {
+        @include socialLinks-icon(/social01);
+    }
+    &__icon-si {
+        @include socialLinks-icon(/social02);
+    }
+    &__icon-pi {
+        @include socialLinks-icon(/social03);
+    }
+    &__icon-yo {
+        @include socialLinks-icon(/social04);
+    }
 }
-.icon-fb {
-    background: url(../images/social01.png) 0 0 no-repeat;
-}
-.icon-si {
-    background: url(../images/social02.png) 0 0 no-repeat;
-}
-.icon-pi {
-    background: url(../images/social03.png) 0 0 no-repeat;
-}
-.icon-yo {
-    background: url(../images/social04.png) 0 0 no-repeat;
-}
-.header__navLinks {
+.navLinks {
     ul {
         li {
             float: left;
@@ -80,7 +68,95 @@
         }
     }
 }
-.header__navLinks {
+.navLinks {
     float: right;
-    margin-top: 40px;
+    margin-top: 60px;
+    margin-right: 300px;
+}
+.cart__menu {
+    color: #fff;
+    font-size: 0.85em;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+.cart {
+    border: 1px solid #fff;
+    padding: 10px;
+}
+.cart__list {
+    background-color: #fff;
+    color: #505050;
+    border: 1px solid #D7D2D2;
+    padding-top: 10px;
+    display: none;
+}
+.cart__item {
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.cart__all__price {
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    font-size: 0.8em;
+}
+.cart__checkout {
+    position: absolute;
+    bottom: 9px;
+    right: 5px;
+    background-color: #e12a7d;
+    color: #fff;
+    padding: 10px;
+    &:hover {
+        color: #fff;
+    }
+}
+.mini-cart-img {
+    float: left;
+    margin-right: 10px;
+}
+.mini-cart-title {
+    line-height: 1.7;
+    font-size: 0.7rem;
+}
+.mini-cart-info, .mini-cart-count, .mini-cart-price {
+    float: left;
+    margin-right: 10px;
+}
+.color-pink {
+    color: #ff9fc3;
+    margin: 0 5px;
+}
+i.arrow {
+    float: right;
+    position: relative;
+    margin: 0 0 0 20px;
+    width: 6px;
+    height: 10px;
+    cursor: pointer;
+    -moz-transition: ease-in .3s;
+    -o-transition: ease-in .3s;
+    -webkit-transition: ease-in .3s;
+    transition: ease-in .3s;
+    span {
+        position: absolute;
+        top: 7px;
+        left: -4px;
+        width: 0;
+        height: 0;
+        border-color: rgba(255, 255, 255, 0);
+        border-color: transparent\0;
+        _border-color: tomato;
+        _filter: chroma(color=tomato);
+        border-style: solid;
+        overflow: hidden;
+        border-width: 3px 3px 0;
+        border-top-color: #FFF;
+    }
 }
