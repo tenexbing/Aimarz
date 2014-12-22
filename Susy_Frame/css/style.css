@@ -381,94 +381,6 @@ font-size-Large:  15px = 12px * 1.25
 */
 /* ========= FONT COLOR ========== */
 /* ========= COLOR ========== */
-/* Modules */
-/*主要選單*/
-.submenu {
-  margin-top: 36px; }
-  .submenu ul {
-    overflow: hidden; }
-    .submenu ul li {
-      float: left;
-      margin: 0 10px 10px 0; }
-      .submenu ul li:after {
-        content: "|";
-        display: inline-block; }
-      .submenu ul li a {
-        font-size: 0.85em;
-        color: #313131;
-        padding: 10px;
-        display: inline-block; }
-
-.li-no:after {
-  display: none !important; }
-
-.submenu__focus-tangerine {
-  background-color: #ec6941; }
-  .submenu__focus-tangerine a {
-    color: #fff !important; }
-
-.submenu__focus-black {
-  background-color: #000; }
-  .submenu__focus-black a {
-    color: #fff !important; }
-
-.secmenu {
-  border-top: 1px dotted #b7b7b7;
-  border-bottom: 1px dotted #b7b7b7;
-  padding: 10px 0;
-  margin-bottom: 10px;
-  overflow: hidden; }
-
-.secmenu__mo-title {
-  font-weight: 700;
-  color: #707070;
-  display: block;
-  font-size: 0.8em; }
-
-.secmenu__mo-text {
-  display: block;
-  color: #b5b5b5;
-  font-size: 0.8em; }
-
-.banner {
-  margin-bottom: 60px; }
-  .banner img {
-    width: 100%;
-    height: auto; }
-
-.discounts {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 82px;
-  height: 32px;
-  font-size: 1.2em;
-  color: #fff;
-  padding: 6px 0 0 17px;
-  background: url(../images/bg-discounts.png) 0 0 no-repeat; }
-
-.introduction {
-  font-size: 0.85em; }
-  .introduction h2 {
-    color: #313131;
-    margin-bottom: 5px; }
-
-.price {
-  color: #e6287c;
-  float: left;
-  smargin-right: 5px; }
-
-.price-number {
-  font-weight: 700;
-  font-size: 1.7em; }
-
-.oll-price {
-  float: left;
-  text-decoration: line-through;
-  color: #959595;
-  line-height: 1.8; }
-
 /* Layout */
 body {
   font-family: "微軟正黑體",Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -801,3 +713,119 @@ a.button {
   bottom: 20px;
   right: 0px;
   font-weight: normal; }
+
+/* Modules */
+/*主要選單*/
+.submenu {
+  margin-top: 36px; }
+  .submenu ul {
+    overflow: hidden; }
+    .submenu ul li {
+      float: left;
+      margin: 0 10px 10px 0; }
+      .submenu ul li:after {
+        content: "|";
+        display: inline-block; }
+      .submenu ul li a {
+        font-size: 0.85em;
+        color: #313131;
+        padding: 10px;
+        display: inline-block; }
+
+.li-no:after {
+  display: none !important; }
+
+.submenu__focus-tangerine {
+  background-color: #ec6941; }
+  .submenu__focus-tangerine a {
+    color: #fff !important; }
+
+.submenu__focus-black {
+  background-color: #000; }
+  .submenu__focus-black a {
+    color: #fff !important; }
+
+.secmenu {
+  border-top: 1px dotted #b7b7b7;
+  border-bottom: 1px dotted #b7b7b7;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  overflow: hidden; }
+
+@media (min-width: 961px) {
+  .secmenu__list {
+    width: 23.72881%;
+    float: left;
+    float: left; }
+    .secmenu__list:nth-child(4n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .secmenu__list:nth-child(4n + 2) {
+      margin-left: 25.42373%;
+      margin-right: -100%;
+      clear: none; }
+    .secmenu__list:nth-child(4n + 3) {
+      margin-left: 50.84746%;
+      margin-right: -100%;
+      clear: none; }
+    .secmenu__list:nth-child(4n + 4) {
+      margin-left: 76.27119%;
+      margin-right: -100%;
+      clear: none; }
+    .secmenu__list a {
+      background: url(../images/icon-sec.jpg) 10px 6px no-repeat;
+      padding-left: 40px;
+      display: block;
+      line-height: 1.5; } }
+
+.secmenu__mo-title {
+  font-weight: 700;
+  color: #707070;
+  display: block;
+  font-size: 0.8em; }
+
+.secmenu__mo-text {
+  display: block;
+  color: #b5b5b5;
+  font-size: 0.8em; }
+
+.banner {
+  margin-bottom: 60px; }
+  .banner img {
+    width: 100%;
+    height: auto; }
+
+.discounts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 82px;
+  height: 32px;
+  font-size: 1.2em;
+  color: #fff;
+  padding: 6px 0 0 17px;
+  background: url(../images/bg-discounts.png) 0 0 no-repeat; }
+
+.introduction {
+  font-size: 0.85em; }
+  .introduction h2 {
+    color: #313131;
+    margin-bottom: 5px; }
+
+.price {
+  color: #e6287c;
+  float: left;
+  smargin-right: 5px; }
+
+.price-number {
+  font-weight: 700;
+  font-size: 1.7em; }
+
+.oll-price {
+  float: left;
+  text-decoration: line-through;
+  color: #959595;
+  line-height: 1.8; }

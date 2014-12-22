@@ -7,13 +7,15 @@
 // ----
 
 // 基礎SUSY 設定檔   非必要請勿更動-------------->
-
+@import "susy";
+// @import "breakpoint";
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";  
 
 
 // Requiremen8ts
 // ============
 
-@import "susy";
+
 
 
 //使用 map setting

@@ -4,21 +4,20 @@
 @import "susy";
 // @import "breakpoint";
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint"; 
-@import "Base/normalize";
+@import "Base/_normalize";
 @import "Base/_typography";
 
 /* Utils */
-@import "Utils/_mixin"; 
+@import "Utils/_mixin";  
 @import "Utils/_variables";
-
-/* Modules */ 
-@import "Modules/_submenu";
-@import "Modules/_banner";
-@import "Modules/shop";
-
 
 /* Layout */
 @import "Layout/_grids";
 @import "Layout/_layout";
 @import "Layout/_header";
 @import "Layout/_footer"; 
+
+/* Modules */ 
+@import "Modules/_submenu";
+@import "Modules/_banner";
+@import "Modules/shop";
