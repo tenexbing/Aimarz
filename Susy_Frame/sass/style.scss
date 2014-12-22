@@ -1,20 +1,24 @@
-// Screen
-// ======
-
-// @import "grids";
-
-@import "Base/normalize";
-
-// compass 重置
-@import "compass/reset";
+/*  base */
+@import "compass";
 @import "compass/css3";
-@import "Base/_mixin";
+@import "susy";
+// @import "breakpoint";
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint"; 
+@import "Base/normalize";
+@import "Base/_typography";
 
-@import "Base/_grids";
-@import "Base/_layout";
+/* Utils */
+@import "Utils/_mixin"; 
+@import "Utils/_variables";
 
-@import "_header";
-@import "_submenu";
-@import "_banner";
-@import "shop";
-@import "_footer";
+/* Modules */ 
+@import "Modules/_submenu";
+@import "Modules/_banner";
+@import "Modules/shop";
+
+
+/* Layout */
+@import "Layout/_grids";
+@import "Layout/_layout";
+@import "Layout/_header";
+@import "Layout/_footer"; 

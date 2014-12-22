@@ -8,7 +8,6 @@
 
 // 基礎SUSY 設定檔   非必要請勿更動-------------->
 
-@import "breakpoint";  
 
 
 // Requiremen8ts
@@ -96,14 +95,3 @@ $desktop_layout : 12;
 
 
 
-
-*
-{
-    //CSS3的功能，建議所有元素都使用吧！
-    @include box-sizing(border-box);
-}
-    
-html, body 
-{
-    height: 100%;
-}

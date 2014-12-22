@@ -65,18 +65,18 @@
     margin-bottom: 10px;
     overflow: hidden;
 }
-.secmenu__list {
-    @include _break("desktop") {
-        @include gallery(3 of 12);
-        float: left;
-        a {
-            background: url(../images/icon-sec.jpg) 10px 6px no-repeat;
-            padding-left: 40px;
-            display: block;
-            line-height: 1.5;
-        }
-    }
-}
+// .secmenu__list {
+//     @include _break("desktop") {
+//         @include gallery(3 of 12);
+//         float: left;
+//         a {
+//             background: url(../images/icon-sec.jpg) 10px 6px no-repeat;
+//             padding-left: 40px;
+//             display: block;
+//             line-height: 1.5;
+//         }
+//     }
+// }
 .secmenu__mo-title {
     font-weight: 700;
     color: #707070;

@@ -1,0 +1,11 @@
+*
+{
+    //CSS3的功能，建議所有元素都使用吧！
+    @include box-sizing(border-box);
+}
+    
+html, body 
+{
+    height: 100%;
+    font-size: 12px;
+}
