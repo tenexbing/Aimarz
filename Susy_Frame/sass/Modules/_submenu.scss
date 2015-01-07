@@ -1,90 +1,118 @@
-/*主要選單*/
-
 .submenu {
-    margin-top: 36px;
-    ul {
-        overflow: hidden;
-        li {
-            float: left;
-            margin: 0 10px 10px 0;
-            &:after {
-                content: "|";
-                display: inline-block;
+    //父層初始化
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+    margin-top: $submenu-grid-height-XL;
+    padding: 0 $base-spacing-S;
+    list-style: none;
+    
+    li {
+        //子元件初始化
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: $base-spacing-S;
+        
+        &:after {content:"|";}
+        //子元件滑過
+        &:hover {
+
+            margin-bottom: 0;
+            
+            a { 
+                color: $base-font-white ;
+                background: $base-color-primary;
             }
-            a {
-                font-size: 0.85em;
-                color: #313131;
-                padding: 10px;
+
+            ul {
+                background-color: $base-color-white;
                 display: inline-block;
+                opacity: 1;
+                visibility: visible;
+                
+                li {
+                    color: $base-font-color-black;
+                    background: transparent;
+                    margin-bottom: 0;
+
+                    a {
+                        background: transparent;
+                        color: $base-font-color-black;
+                        text-align: left;
+                        padding: 0;
+                        margin: 0 ;
+
+                        @include text_vertical-center($submenu-grid-height-XL);
+                        @include base-link($base-font-color-black, $base-font-white);
+                    }
+                }
             }
         }
-    }
-}
-.li-no {
-    &:after {
-        display: none !important;
-    }
-}
-.submenu__focus-tangerine {
-    background-color: #ec6941;
-    a {
-        color: #fff!important;
-    }
-}
-.submenu__focus-black {
-    background-color: #000;
-    a {
-        color: #fff!important;
-    }
-}
-// .secmenu {
-//     border-top: 1px dotted #b7b7b7;
-//     border-bottom: 1px dotted #b7b7b7;
-//     padding: 10px 0;
-//     margin-bottom: 10px;
-//     ul {
-//         overflow: hidden;
-//         li {
-//             @include _break("desktop") {
-//                 @include gallery(3 of 12);
-//                 float: left;
-//             }
-//             a{
-//                 background:url(../images/icon-sec.jpg) 10px 6px no-repeat;
-//                 padding-left: 40px;
-//                 display: block;
-//                 line-height: 1.5;
-//             }
-//         }
-//     }
-// }
-.secmenu {
-    border-top: 1px dotted #b7b7b7;
-    border-bottom: 1px dotted #b7b7b7;
-    padding: 10px 0;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-.secmenu__list {
-    @include _break("desktop") {
-        @include gallery(3 of 12);
-        float: left;
+
+        // 子元件連結初始化
         a {
-            background: url(../images/icon-sec.jpg) 10px 6px no-repeat;
-            padding-left: 40px;
-            display: block;
-            line-height: 1.5;
+            display: inline-block;
+            padding: 0 $base-spacing-S;
+            text-align: center;
+            margin: 0 $base-spacing-M; 
+
+            @include text_vertical-center($submenu-grid-height-base);
+            @include base-link($base-font-color-black, $base-font-white);
+            @include transition();
+        }
+
+        // 次元件初始化
+        ul {
+            display: none;
+            left: 0;
+            min-width: 16rem;
+            opacity: 0;
+            padding: $base-spacing-S;
+            position: absolute;
+            top: $submenu-grid-height-base;
+            visibility: hidden;
+
+            @include z-index(1);
+            @include solid($base-color-gray);  
+            @include transition();
+
+            li {
+                border-bottom: 1px solid $base-color-gray;
+                margin-bottom: 0; 
+                text-align: left; 
+                text-indent: $base-spacing-S;
+                width: 100%;
+                
+                @include text_vertical-center($submenu-grid-height-XL);
+
+                &:hover { 
+                    
+                    background-color: $base-color-primary;
+
+                    a { @include text_vertical-center($submenu-grid-height-XL); }
+                }
+            }
+        }
+
+        // 特殊項目
+        &.is-heightLight  { 
+            &:hover a { background: transparent; }
+            &:after {content:"";}
+        }
+
+        &.color-black {
+
+            background-color: $base-color-black;
+
+            a { @include base-link($base-font-white, $base-color-primary); }
+        }
+
+        &.color-tertiary {
+
+            background-color: $base-color-tertiary;
+            
+            a { @include base-link($base-font-white, $base-font-color-black); }
         }
     }
-}
-.secmenu__mo-title {
-    font-weight: 700;
-    color: #707070;
-    display: block;
-    font-size: 0.8em;
-}
-.secmenu__mo-text {
-    display: block;
-    color: #b5b5b5;
-    font-size: 0.8em;
 }

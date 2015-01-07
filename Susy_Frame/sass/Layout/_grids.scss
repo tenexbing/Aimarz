@@ -4,36 +4,20 @@
 // Compass (v1.0.1)
 // Breakpoint (v2.5.0)
 // Susy (v2.1.3)
-// ----
+// ---- 
 
-// 基礎SUSY 設定檔   非必要請勿更動-------------->
-@import "susy";
-// @import "breakpoint";
-@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";  
-
-
-// Requiremen8ts
-// ============
-
-
-
-
-//使用 map setting
 $susy: (
-    flow: ltr,
-    math: fluid,
-    output: float,
+    math: static,
+    columns: 10,
+    column-width: 80px,
+    gutters: 1 / 4,
+    container: 980px,
+    global-box-sizing: border-box, 
     gutter-position: after,
-    container: auto,
-    container-position: center,
-    columns: 20px,
-    gutters: 1/4,
-    column-width: 80px, //這裡使用固定柵欄寬度，預設是 false
-    global-box-sizing: content-box, 
     last-flow: to,
     debug: (
-        image: 用show, //開發時使用show可看到柵欄，使用hide關閉柵欄顯示
-        color: rgba(#66f, .25),
+        image: show,
+        color: rgba(#ffedde, .25),
         output: background,
         toggle: top right,
     ),
@@ -46,54 +30,34 @@ $susy: (
     )
 );
 
+$mobile_break  : 320px 1023px;
+$mobile_layout : 8;
 
-//設定三種尺寸
-$mobile_break   : 0px 460px;
-$mobile_layout  : 4;
+$desktop_break  : 1024px;
+$desktop_layout : 10;
 
-$pad_break      : 461px 960px;
-$pad_layout     : 12;
-
-$desktop_break  : 961px;
-$desktop_layout : 12;
+$wide_break  : 1280px;
+$wide_layout : 12; 
 
 
-
-//
-// 自訂一個mixin, 快速依照版面顯示不同的 style
-// 
-// @type string    mobile | pad | desktop
-//
-@mixin _break($break:mobile)
+@mixin _break($break:desktop)
 {
-    
-    @if ($break == "mobile")
-    {
-        //套用 _grids2.scss 所設定的斷點px 與 柵欄數
-        @include susy-breakpoint($mobile_break, $mobile_layout)
-        {
-            @content;
-        }  
-    } 
 
-    @else if ($break == "pad")
-    {
-        @include susy-breakpoint($pad_break, $pad_layout)
-        {
-            @content;
-        }
-    }
-
-    @else if ($break == "desktop")
+    @if ($break == "desktop")
     {
         @include susy-breakpoint($desktop_break, $desktop_layout)
         {
             @content;
         }
     }
+    @else if ($break == "wide")
+    {
+        @include susy-breakpoint($wide_break, $wide_layout)
+        {
+            @content;
+        }
+    }
     
+    // @include container($susy);
+
 }
-
-
-
-

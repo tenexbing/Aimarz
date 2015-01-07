@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examples</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -13,27 +14,29 @@
 <body>
     <!-- 上方區塊 -->
     <div class="header_bg">
-        <div class="header">
-            <div class="wrap-wide">
-                <h1 class="logo">
+        <div class="header wrap-wide">
+            <h1 class="logo"> 
                 <a href="#">Aimarz</a>
                 </h1>
-                <div class="productSearch">
-                    <input type=”text” value="搜尋商品..." />
-                    <a href="#" class="searchbt1" onclick="return simpleSearch();" onkeypress="return simpleSearch();">搜尋</a>
-                </div>
-                <div class="socialLinks">
-                    <ul>
-                        <li><a href="" class="socialLinks__icon-fb">facebook</a>
-                            </ll>
-                            <li><a href="" class="socialLinks__icon-si">sina</a>
-                            </li>
-                            <li><a href="" class="socialLinks__icon-pi">pic</a>
-                            </li>
-                            <li><a href="" class="socialLinks__icon-yo">youtube</a>
-                            </li>
-                    </ul>
-                </div>
+            <div class="productSearch">
+                <input type="text" palceholder="搜尋商品"/>
+                <a href="#" class="searchbt1" onclick="return simpleSearch();" onkeypress="return simpleSearch();">搜尋</a>
+            </div>
+            <!-- /productSearch -->
+            <div class="socialLinks">
+                <ul>
+                    <li><a href="" class="socialLinks__icon-fb">facebook</a>
+                        </ll>
+                        <li><a href="" class="socialLinks__icon-si">sina</a>
+                        </li>
+                        <li><a href="" class="socialLinks__icon-pi">pic</a>
+                        </li>
+                        <li><a href="" class="socialLinks__icon-yo">youtube</a>
+                        </li>
+                </ul>
+            </div>
+            <!-- /socialLinks -->
+            <div class="subRow">
                 <div class="navLinks">
                     <ul>
                         <li><a href="">首頁</a>
@@ -46,246 +49,412 @@
                         </li>
                     </ul>
                 </div>
+                <!-- /navLinks -->
                 <div class="cart__menu">
-                    <div class="cart">
-                        購物車<span class="color-pink">(3)</span> 共NT. <span class="color-pink">4860</span>元 / 剩餘紅利 <span>7980</span>點 <i class="arrow"><span></span></i>
-                    </div>
-                    <div class="cart__list">
-                        <ul>
-                            <li class="cart__item">
-                                <div class="menu-tbl-item-con">
-                                    <div class="mini-cart-img">
-                                        <a href=""><img src="http://placehold.it/50x50&amp;text=img">
-                                        </a>
-                                    </div>
-                                    <div class="mini-cart-title">
-                                        法國甜美女孩黑白波卡點點短裙
-                                    </div>
-                                    <div class="mini-cart-info">黑/M</div>
-                                    <div class="mini-cart-count">x3</div>
-                                    <div class="mini-cart-price">$1980</div>
-                                    <div class="mini-cart-del">
-                                        <a href="">刪除</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="cart__item">
-                                <div class="menu-tbl-item-con">
-                                    <div class="mini-cart-img">
-                                        <a href=""><img src="http://placehold.it/50x50&amp;text=img">
-                                        </a>
-                                    </div>
-                                    <div class="mini-cart-title">
-                                        法國甜美女孩黑白波卡點點短裙
-                                    </div>
-                                    <div class="mini-cart-info">黑/M</div>
-                                    <div class="mini-cart-count">x3</div>
-                                    <div class="mini-cart-price">$1980</div>
-                                    <div class="mini-cart-del">
-                                        <a href="">刪除</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="menu-tbl-ft">
-                            <div class="cart__all__price">
-                                TOTAL:$4860
-                                <a href="#" class="cart__checkout">結帳CheckOut</a>
-                            </div>
-                        </div>
-                    </div>
+                    購物車<span class="heightLight text-number">(3)</span> 共NT. <span class="heightLight text-number">4860</span>元 / 剩餘紅利 <span>77980</span>點 <i class="arrow"><span></span></i>
                 </div>
+                <!-- /cart -->
             </div>
+            <!-- /#subRow -->
+            <div class="cart" style="display:none;">
+                <ul class="cart__list">
+                    <li class="cart__list__item">
+                        <a href="#" class="cart__list__item-img"><img src="http://placehold.it/50x50&amp;text=img">
+                        </a>
+                        <h4>
+                                    <a href="" class="cart__list__item-title">LArtisan savonnier 法國甜美女孩黑白波卡點點短裙</a>
+                                </h4>
+                        <span class="cart__list__item-info">黑/M</span>
+                        <span class="cart__list__item-count text-number">x3</span>
+                        <span class="cart__list__item-price text-number">$1980</span>
+                        <a href="" class="cart__list__item-del">刪除</a>
+                    </li>
+                    <!-- /cart__item -->
+                </ul>
+                <!-- /ul cart__list -->
+                <div class="cart__total">
+                    <span class="cart__total__sum">TOTAL:$4860</span>
+                    <a href="#" class="cart__total__checkout">結帳CheckOut</a>
+                </div>
+                <!-- /cart__total -->
+            </div>
+            <!-- /cart -->
         </div>
+        <!-- /header -->
     </div>
+    <!-- /header_bg -->
     <!-- 主要內容切換 -->
-    <div class="main">
-        <div class="wrap-wide">
-            <div class="submenu">
+    <div class="main wrap-wide">
+        <ul class="submenu">
+            <li class="is-heightLight color-tertiary"><a href="">超值下殺699</a>
+            </li>
+            <li class="is-heightLight color-black"><a href="">精選TOP10</a>
+            </li>
+            <li><a href="">美妝</a>
                 <ul>
-                    <li class="submenu__focus-tangerine li-no"><a href="">超值下殺699</a>
+                    <li><a href="#">美妝美妝美妝美妝</a>
                     </li>
-                    <li class="submenu__focus-black li-no"><a href="">精選TOP10</a>
+                    <li><a href="#">美妝</a>
                     </li>
-                    <li><a href="">美妝</a>
-                    </li>
-                    <li><a href="">全身保養</a>
-                    </li>
-                    <li><a href="">3C數位</a>
-                    </li>
-                    <li><a href="">時尚大道</a>
-                    </li>
-                    <li><a href="">臉部保養</a>
-                    </li>
-                    <li><a href="">親子寵物</a>
-                    </li>
-                    <li><a href="">貼身衣物</a>
-                    </li>
-                    <li><a href="">美髮專區</a>
-                    </li>
-                    <li><a href="">生活居家</a>
-                    </li>
-                    <li><a href="">曲線雕塑</a>
-                    </li>
-                    <li><a href="">運動休閒</a>
-                    </li>
-                    <li><a href="">清潔保健</a>
-                    </li>
-                    <li><a href="">樂活休閒</a>
-                    </li>
-                    <li><a href="">潮流配件</a>
-                    </li>
-                    <li><a href="">韓系流行</a>
+                    <li><a href="#">美妝美妝</a>
                     </li>
                 </ul>
-            </div>
-            <div class="secmenu">
-                <div class="secmenu__list">
-                    <a href="">
-                        <span class="secmenu__mo-title">好感度破表化妝術</span>
-                        <span class="secmenu__mo-text">看似無妝卻有妝的「裸妝女王」必備</span>
-                    </a>
-                </div>
-                <div class="secmenu__list">
-                    <a href="">
-                        <span class="secmenu__mo-title">好感度破表化妝術</span>
-                        <span class="secmenu__mo-text">看似無妝卻有妝的「裸妝女王」必備</span>
-                    </a>
-                </div>
-                <div class="secmenu__list">
-                    <a href="">
-                        <span class="secmenu__mo-title">好感度破表化妝術</span>
-                        <span class="secmenu__mo-text">看似無妝卻有妝的「裸妝女王」必備</span>
-                    </a>
-                </div>
-                <div class="secmenu__list">
-                    <a href="">
-                        <span class="secmenu__mo-title">好感度破表化妝術</span>
-                        <span class="secmenu__mo-text">看似無妝卻有妝的「裸妝女王」必備</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+            </li>
+            <li><a href="#">美妝美妝</a>
+            </li>
+            <li><a href="#">美妝</a>
+            </li>
+            <li><a href="#">美妝美妝</a>
+            </li>
+            <li><a href="#">美妝美妝</a>
+            </li>
+            <li><a href="#">美妝美妝</a>
+            </li>
+            <li><a href="#">美妝</a>
+            </li>
+            <li><a href="#">美妝</a>
+            </li>
+            <li><a href="#">美妝美妝</a>
+            </li>
+            <li><a href="#">美妝美妝</a>
+            </li>
+            <li><a href="#">美妝</a>
+            </li>
+            <li><a href="#">美妝美妝</a>
+            </li>
+            <li><a href="#">美妝</a>
+            </li>
+            <li><a href="#">美妝美妝</a>
+            </li>
+            <li><a href="#">美妝</a>
+            </li>
+        </ul>
+        <!-- /submenu -->
 
-        <!-- banner -->
-        <div class="banner">
-            <div class="banner__container">
-                <div class="slides">
-                    <img src="images/banner.jpg" alt="">
-                </div>
-                <a href="" class="slides_prev">prev</a>
-                <a href="" class="slides_next">next</a>
-                <ul class="pagination">
-                    <li class=""><a href="#0">1</a>
-                    </li>
-                    <li class=""><a href="#1">2</a>
-                    </li>
-                    <li class=""><a href="#2">3</a>
-                    </li>
-                    <li class="current"><a href="#3">4</a>
-                    </li>
-                    <li class=""><a href="#4">5</a>
-                    </li>
-                    <li class=""><a href="#5">6</a>
-                    </li>
-                    <li class=""><a href="#6">7</a>
-                    </li>
-                </ul>
+        <ul class="secmenu">
+            <li>
+                <h4 class="secmenu__title"><a href="">好感度破表化妝術</a></h4>
+                <p class="secmenu__description"><a href="">看似無妝卻有妝的「裸妝女王」必備</a>
+                </p>
+            </li>
+            <li>
+                <h4 class="secmenu__title"><a href="">好感度破表化妝術</a></h4>
+                <p class="secmenu__description"><a href="">看似無妝卻有妝的「裸妝女王」必備</a>
+                </p>
+            </li>
+            <li>
+                <h4 class="secmenu__title"><a href="">好感度破表化妝術</a></h4>
+                <p class="secmenu__description"><a href="">看似無妝卻有妝的「裸妝女王」必備</a>
+                </p>
+            </li>
+            <li>
+                <h4 class="secmenu__title"><a href="">好感度破表化妝術</a></h4>
+                <p class="secmenu__description"><a href="">看似無妝卻有妝的「裸妝女王」必備</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="banner__container">
+            <div class="slides">
+                <img src="images/banner.jpg" alt="">
             </div>
-        </div>
-        <!-- banner end -->
-        <div class="collection">
-            <div class="wrap-wide">
-                <h2 class="collection__title">新品上架 
-                <a href="" class="collection__more">+more</a></h2>
-                <div>
-                    <ul class="collection__list">
-                        <ll class="collection__item">
-                            <a href="">
-                                <img src="images/demo-img.jpg" alt="" class="collection__list__img">
-                            </a>
-                            <div class="collection__info">
-                                <h3 class="collection__info__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
-                                <div class="collection__price">限時NT.<span class="collection__price-number">990</span>
-                                </div>
-                                <div class="collection__oll-price">NT.1680</div>
-                            </div>
-                        </ll>
-                        <ll class="collection__item">
-                            <a href="" class="collection__list__img">
-                                <img src="images/demo-img.jpg" alt="">
-                            </a>
-                            <div class="collection__info">
-                                <h3 class="collection__info__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
-                                <div class="collection__price">限時NT.<span class="collection__price-number">990</span>
-                                </div>
-                                <div class="collection__oll-price">NT.1680</div>
-                            </div>
-                        </ll>
-                    </ul>
-                </div>
-            </div>
+            <a href="" class="slides_prev">prev</a>
+            <a href="" class="slides_next">next</a>
+            <ul class="pagination">
+                <li class=""><a href="#0">1</a>
+                </li>
+                <li class=""><a href="#1">2</a>
+                </li>
+                <li class=""><a href="#2">3</a>
+                </li>
+                <li class="current"><a href="#3">4</a>
+                </li>
+                <li class=""><a href="#4">5</a>
+                </li>
+                <li class=""><a href="#5">6</a>
+                </li>
+                <li class=""><a href="#6">7</a>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="footer">
-        <div class="wrap-wide">
-            <div class="footerLinks">
-                <dl class="footerLinks_list">
-                    <dt class="footerLinks_list_title">ABOUT Aimarz</dt>
-                    <dd><a href="#">公司介紹</a>
-                    </dd>
-                    <dd><a href="#">廠商合作</a>
-                    </dd>
-                    <dd><a href="#">聯絡我們</a>
-                    </dd>
-                    <dd><a href="#">服務條款</a>
-                    </dd>
-                    <dd><a href="#">隱私權政策</a>
-                    </dd>
-                    <dd><a href="#">免責聲明</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt class="footerLinks_list_title">CUSTOMER SERVICE</dt>
-                    <dd><a href="#">首批購物教學</a>
-                    </dd>
-                    <dd><a href="#">付款方式說明</a>
-                    </dd>
-                    <dd><a href="#">會員紅利說明</a>
-                    </dd>
-                    <dd><a href="#">退/換貨流程</a>
-                    </dd>
-                    <dd><a href="#">訂單查詢</a>
-                    </dd>
-                    <dd>
-                        <a href="#"></a>
-                    </dd>
-                </dl>
-            </div>
-            <div class="paper">
-                <h4 class="paper_title">E-PAPER ORDER</h4>
-                <input type=”text” value="EMAIL..." />
-                <span class="paper__searchbt">
-                    <a href="#" onclick="return simpleSearch();" onkeypress="return simpleSearch();">訂閱</a> 
-                </span>
-                <a href="#" class="button">取消訂閱</a>
-            </div>
-            <div class="ect">
-                <h2 class="ect_title">加入好友LINE ‧優惠活動獎不完</h2>
-                <div class="ect__box">
-                    <img src="images/line_img.jpg" alt="" class="ect__pic">
-                    <div class="ect__box__title">桌機用戶</div>
-                    <p>ID搜尋加入好友：Aimarz</p>
-                </div>
-                <div class="ect__box">
-                    <img src="images/qr_img.jpg" alt="" class="ect__pic">
-                    <div class="ect__box__title">桌機用戶</div>
-                    <p>手機掃瞄加入好友</p>
-                </div>
-            </div>
-            <div class="copyright">Copyright © 2014 www.aimarz.com All Rights Reserved.</div>
+    <!-- /banner -->
+    <div class="collection wrap-wide">
+        <div class="headerWrap">
+            <h2 class="headerWrap__title">新品上架</h2>
+            <a href="" class="headerWrap__more"><span>More+</span></a>
         </div>
+        <ul class="collection__list">
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+        </ul>
+        <!- /collection__list ->
     </div>
+    <!- /collection ->
+    <div class="collection wrap-wide">
+        <div class="headerWrap">
+            <h2 class="headerWrap__title">新品上架</h2>
+            <a href="" class="headerWrap__more"><span>More+</span></a>
+        </div>
+        <ul class="collection__list">
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+        </ul>
+        <!- /collection__list ->
+    </div>
+    <!- /collection ->
+    <div class="collection wrap-wide">
+        <div class="headerWrap">
+            <h2 class="headerWrap__title">新品上架</h2>
+            <a href="" class="headerWrap__more"><span>More+</span></a>
+        </div>
+        <ul class="collection__list">
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info">
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+            <ll class="collection__list__item">
+                <a href="">
+                    <img src="images/demo-img.jpg" alt="" class="collection__list__item__img">
+                </a>
+                <h3 class="collection__list__item__title"><a href="#">La Sincia 麥盧卡 晶淬親透凝霜(40g)</a></h3>
+                <p class="collection__list__item__info"> 
+                    <span class="collection__list__item__info-text">限時NT.</span>
+                    <span class="collection__list__item__info-number">990</span>
+                    <span class="collection__list__item__info-price">NT.1680</span>
+                </p>
+                <!- /collection__list__item__info ->
+                <a class="collection__list__item__viewDetail">view</a>
+                <strong class="collection__list__item__discount">73<span>折</span></strong>
+            </ll>
+            <!- /collection__list__item ->
+        </ul>
+        <!- /collection__list ->
+    </div>
+    <!- /collection ->
+    </div> 
+    <!- /main ->
+    <div class="footer-bg">
+        <div class="footer wrap-wide">
+            <dl class="footerLinks pre">
+                <dt>ABOUT Aimarz</dt>
+                <dd><a href="#">公司介紹</a>
+                </dd>
+                <dd><a href="#">廠商合作</a>
+                </dd>
+                <dd><a href="#">聯絡我們</a>
+                </dd>
+                <dd><a href="#">服務條款</a>
+                </dd>
+                <dd><a href="#">隱私權政策</a>
+                </dd>
+                <dd><a href="#">免責聲明</a>
+                </dd>
+            </dl><!- /footerLinks ->
+            <dl class="footerLinks">
+                <dt>CUSTOMER SERVICE</dt>
+                <dd><a href="#">首批購物教學</a>
+                </dd>
+                <dd><a href="#">付款方式說明</a>
+                </dd>
+                <dd><a href="#">會員紅利說明</a>
+                </dd>
+                <dd><a href="#">退/換貨流程</a>
+                </dd>
+                <dd><a href="#">訂單查詢</a>
+                </dd>
+                <dd><a href="#">常見問題Q&A</a></dd>
+            </dl><!- /footerLinks -> 
+            <div class="subContent pre">
+                <div class="paper"> 
+                    <h2 class="footer__title">E-PAPER ORDER</h2>
+                    <input type="email" placeholder="輸入Email" class="paper__email"/>
+                    <input type="submit" value="訂閱" class="paper__submit"/> 
+                    <a href="#" class="paper__cancel">取消訂閱</a>
+                </div>
+                <!- /paper ->
+                <div class="ect">
+                    <h2 class="footer__title">加入好友LINE ‧優惠活動獎不完</h2>
+                    <div class="ect__box-Line">
+                        <img src="images/line_img.jpg" alt="" class="ect__box__pic">
+                        <h4 class="ect__box__title">桌機用戶</h4>
+                        <p class="ect__box__description">ID搜尋加入好友：Aimarz</p>
+                    </div>  
+                    <!- /ect__box -> 
+                    <div class="ect__box-qrCode"> 
+                        <img src="images/qr_img.jpg" alt="" class="ect__box__pic qrCode">
+                        <h4 class="ect__box__title">手機用戶</h4>
+                        <p class="ect__box__description">手機掃瞄加入好友</p>
+                    </div>
+                    <!- /ect__box ->
+                </div>
+                <!- /ect ->
+            </div><!- /subContent ->
+            <p class="copyright">Copyright © 2014 www.aimarz.com All Rights Reserved.</p>
+            <! - /copyright ->
+        </div>
+        <!- /footer ->
+    </div><!- /footer-bg ->
 </body>
 
 </html>

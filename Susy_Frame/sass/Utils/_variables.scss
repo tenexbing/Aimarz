@@ -1,50 +1,104 @@
+/* = SPACING ---
+------------------------------------------------------------------------------------------ */
+$base-spacing-XS : 5px;
+$base-spacing-S  : 10px;
+$base-spacing-M  : 15px;
+$base-spacing-L  : 20px;
+$base-spacing-XL : 50px;
 
-/* ========= SPACING ========== */
 
-$base-spacing-S: 5px;
-$base-spacing-M: 10px;
-$base-spacing-L: 20px;
-$base-spacing-XL: 50px;
-
-
-/* ========= FONT FAMILY ==========
-fontfamily-Chinese : Mac, win789.., winXP, ect...
-fontfamily-English
-*/
+/* = FONT FAMILY ---
+------------------------------------------------------------------------------------------ */
+// fontfamily-Chinese : Mac, win789.., winXP, ect...
+// fontfamily-English
 
 $base-font-family-chinese: 'LiHei Pro', '微軟正黑體', '新細明體', sans-serif; 
 $base-font-family-english: Arial, Helvetica, sans-serif;
 
 
-/* ========= FONT SIZE ==========
+/* = FONT SIZE ---
+------------------------------------------------------------------------------------------ */
 // BODY FONT SIZE : 12px //
-font-size-Small:  11px = 12px * 0.92
-font-size-Medium: 12px = 12px * 1
-font-size-Large:  15px = 12px * 1.25
-*/
+// font-size-Small:  11px = 12px * 0.92
+// font-size-Medium: 12px = 12px * 1
+// font-size-Large:  15px = 12px * 1.25
+// font-size-XL  : 	25px = 12px * 2.08
+$base-font-size-S : 0.92rem;
+$base-font-size-M : 1rem;
+$base-font-size-L : 1.25rem;
+$base-font-size-XL  : 2.08rem;
 
-$base-font-size-S: 0.92rem;
-$base-font-size-M: 1rem;
-$base-font-size-L: 1.25rem;
+/* = FONT COLOR ---
+------------------------------------------------------------------------------------------ */
+$base-font-color       : #a0a0a0;
+$base-font-color-light : #b5b5b5;
+$base-font-color-basic : #707070;
+$base-font-color-dark  : #313131;
+$base-font-color-black : #000000;
+$base-font-white       : #ffffff;
+
+/* = COLOR ---
+------------------------------------------------------------------------------------------ */
+$base-color-white     : #ffffff;
+$base-color-gray      : #D7D2D2;
+$base-color-black     : #000000;
+$base-color-primary   : #e6287c;
+$base-color-secondary : #ff9fc3;
+$base-color-tertiary  : #eb6100;
 
 
-/* ========= FONT COLOR ========== */
-$base-font-color: #a0a0a0;
-$base-font-color-dark: #313131;
-$base-font-color-black: #000000;
+/* = FOOTER ---
+------------------------------------------------------------------------------------------ */
+$footer-base-color: #a0a0a0;
+// font-size-XL  : 	18px = 12px * 1.33
+$footerlink-title-size: 1.33rem;
+$colum-spaceing-vertical: $base-spacing-XL;
+$grCode-img-width: 73px; 
+$Line-img-width: 50px;
+$box-text-height: 2rem;
+
+/* = HEADER ---
+------------------------------------------------------------------------------------------ */
+$header-text-color: #fff;
+$header-primary-color: #fff;
+$header-grid: 35px;
+$header-icon-sum: 4;
+$socialLinks-margin-top: 25px;
+$subRow-margin-bottom: $base-spacing-M;
+// grid height + middle space + top space + bottom space; 
+$header-height: ($header-grid * 2 ) + $base-spacing-S + $socialLinks-margin-top + $subRow-margin-bottom;
+// icon size width + margin Lelt * icon sum 
+$header-socialLinks-width: ($header-grid + $base-spacing-S ) * $header-icon-sum;
+
+$productSearch-grid-height: 25px;
+
+/* = CART ---
+------------------------------------------------------------------------------------------ */
+$cart-width              : 300px;
+$cart__item-height       : 50px;
+$mini-cart-del-width     : 20px;
+$mini-cart-title-height  : 35px;
+$mini-cart-img-size      : 50px;
+$mini-cart-parts-sum     : 3; 
+$cart__total-item-height : 25px;
 
 
-/* ========= COLOR ========== */
-$base-color-black: #000;
-$base-color-primary: #e6287c;
-$base-color-secondary: #ff9fc3;
-$base-color-tertiary: #eb6100;
-
-// FOOTER
-$footer-link-color: #a0a0a0;
+/* = SUBMENU ---
+------------------------------------------------------------------------------------------ */
+$submenu-grid-height-base : 25px;
+$submenu-grid-height-XL   : 35px;
 
 
+/* = COLLECTION ---
+------------------------------------------------------------------------------------------ */
 
+$collection-gap: 4%;
+$collection-huge-number: 1.33rem;
+$collection-row-item-sum: 4;
+//20px = 12px * 2.08
+$discount-font-size: 1.67rem;
+$viewDetail-size: 55px;
+$collrction-item-width: (100% - ($collection-gap * $collection-row-item-sum)) /$collection-row-item-sum ;
 
 
 

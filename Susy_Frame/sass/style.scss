@@ -1,15 +1,17 @@
-/*  base */
+/*  Compass */
 @import "compass";
 @import "compass/css3";
 @import "susy";
 // @import "breakpoint";
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint"; 
-@import "Base/_normalize";
-@import "Base/_typography";
 
-/* Utils */
+/* Utils */ 
 @import "Utils/_mixin";  
 @import "Utils/_variables";
+
+/* Base */ 
+@import "Base/_normalize";
+@import "Base/_typography";
 
 /* Layout */
 @import "Layout/_grids";
@@ -19,5 +21,6 @@
 
 /* Modules */ 
 @import "Modules/_submenu";
+@import "Modules/_secmenu";
 @import "Modules/_banner";
-@import "Modules/shop";
+@import "Modules/_collection";

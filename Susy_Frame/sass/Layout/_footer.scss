@@ -1,87 +1,163 @@
-.footer {
-    background-color: #000000;
-    padding: 17px;
-    .wrap-wide {
-        position: relative;
-        overflow: hidden;
-    }
+.footer-bg {
+
+     background-color: $base-color-black;
 }
 
-.footer__links {
-    float: left;
-    margin-left: 120px;
-    dl {
-        float: left;
-        margin-right: 90px;
-        overflow: hidden;
-        border-left: solid 1px #a0a0a0;
-        padding-left: 10px;
+.footer {
+
+    .footer__title {
+
+        color: $base-font-white;
+        margin-bottom: 1rem;
+        font-size: $footerlink-title-size;
+
+    }
+
+    .footerLinks {
+
+        margin-top: $colum-spaceing-vertical;
+        @include span(2);
+
+        dt {
+
+            font-family: $base-font-family-english;
+            @extend .footer__title;         
+        }
+
         dd {
-            clear: both;
-            margin: 4px 0;
-            a {
-                color: #a0a0a0;
-                font-size: 0.8rem;
-                &:hover {
-                    color: #fff;
+
+            border-left: 1px solid $footer-base-color;
+            line-height: 2rem;
+            margin-left: 0;
+            text-indent: 1rem;
+
+            a { 
+
+                text-decoration: none;
+                @include base-link($footer-base-color, $base-color-primary);
+
+            }
+        }
+    } 
+
+    .subContent {
+
+        @include span(last 6);
+        
+    }
+    
+    .pre {
+
+        @include pre(1); 
+    }
+
+    .paper {
+
+        margin-top: $colum-spaceing-vertical;
+
+        &__email {
+         
+            width: 200px;
+
+            @include text_vertical-center(2rem);   
+        }
+
+        &__submit {
+
+            border: 0px;
+            background-color: $base-color-primary;
+            padding: 0 1rem;
+            color: $base-font-white; 
+            margin-left: $base-spacing-XS;
+            margin-right: $base-spacing-S;
+
+            @include text_vertical-center(2rem);
+            @include transition();
+
+            &:hover {
+
+                background-color: $base-color-secondary;
+            }
+        }
+
+        &__cancel {
+
+            color: $base-font-white;
+            text-decoration: underline;
+
+            @include base-link($base-font-white  , $base-color-primary);
+        }
+    }
+
+    .ect {
+
+        margin-top: $colum-spaceing-vertical;
+        
+
+
+        &__box {
+
+            &__pic {
+                
+                float: left;
+            }
+
+            &__title {
+                
+                position: absolute;
+                height: $box-text-height;
+                font-size: $base-font-size-L;
+                color: $base-font-white;
+            }
+
+            &__description {
+
+                position: absolute;
+                top: $box-text-height / 2;
+                padding-top: $base-spacing-S;
+                height: $box-text-height;
+                color: $base-font-white;
+            }
+ 
+            &-Line {
+
+                overflow: hidden;
+                position: relative;
+
+                @include span(3);
+
+                h4, p {
+                     
+                    left: $Line-img-width + $base-spacing-S;
+                    
+                }
+            } 
+ 
+            &-qrCode {
+                
+                overflow: hidden;
+                position: relative;
+
+                @include span(last 3);
+
+                h4, p {
+                    
+                    left: $grCode-img-width + $base-spacing-S;
+                    
                 }
             }
         }
     }
-}
-.footer_title {
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.1em;
-    margin-bottom: 15px;
-}
-.searchbt {
-    a {
-        padding: 5px 5px 8px 5px;
-        background-color: #e6287c;
-        margin-left: 5px;
-        color: #fff;
-        font-size: 0.85em;
+
+    .copyright {
+
+        margin-top: $colum-spaceing-vertical;
+        text-align: right;
+        font-family: $base-font-family-english;
+        font-size: $base-font-size-S;
+        margin-bottom: $base-spacing-L;
+
+        @include full; 
     }
 }
-a.button {
-    text-decoration: underline;
-    color: #fff;
-    margin-left: 5px;
-    font-size: 0.85em;
-}
-.footer__ect {
-    float: left;
-    h2 {
-        color: #fff;
-        margin: 20px 0;
-    }
-}
-.box {
-    float: left;
-    width: 250px;
-    .pic {
-        float: left;
-    }
-    p {
-        color: #fff;
-        display: inline-block;
-        font-size: 0.85em;
-        margin: 10px;
-    }
-}
-.box_title {
-    float: left;
-    color: #fff;
-    margin: 0 10px;
-}
-.footer__copyright {
-    color: #a0a0a0;
-    font-family: Arial Regular, Arial RegularArial, "Helvetica Neue", Helvetica, sans-serif;
-    float: right;
-    font-size: 0.8em;
-    position: absolute;
-    bottom: 20px;
-    right: 0px;
-    font-weight: normal;
-}
+

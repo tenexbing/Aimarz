@@ -1,0 +1,136 @@
+.collection {
+
+	margin-bottom: $base-spacing-XL;
+
+	&__list {
+		
+		margin-right: -$collection-gap;
+		overflow: hidden;
+
+		&__item {
+
+			float: left;
+			margin-right: $collection-gap;
+			margin-bottom: $base-spacing-L;
+			overflow: hidden;
+			position: relative;
+			width: $collrction-item-width;
+
+			&__title {
+
+				padding: $base-spacing-XS 0;
+				font-size: $base-font-size-M;
+				font-family: $base-font-family-chinese;
+
+				a {	@include base-link($base-font-color-dark, $base-color-primary);}
+			} 
+
+			&__img { width: 100%; }
+
+			&__info {
+
+				color: $base-color-primary;
+
+				&-number { font-size: $collection-huge-number; }
+
+				&-price {
+
+					color: $base-font-color-light;
+					text-decoration: line-through;
+					margin-left: $base-spacing-S; 
+					font-family: $base-font-family-english;
+				}
+			}
+
+			&__viewDetail {
+				
+				background-color: $base-color-gray;
+				color: $base-font-white;
+				cursor: pointer;
+				display: block;
+				height: $viewDetail-size;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				top: 0;
+				width: $viewDetail-size;
+				font-family: $base-font-family-english;
+
+				@include z-index(1);
+				@include text_vertical-center($viewDetail-size);
+
+				&:hover {
+
+					background-color: $base-color-primary;
+					@include transition;
+				}
+			} 
+
+			&__discount {
+
+				position: absolute; 
+				left: 0;
+				top: 0;
+				background-color: $base-color-primary;
+				color: $base-font-white;
+				font-size: $discount-font-size;
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+ 				text-indent: 1rem;
+ 				font-weight: normal;
+ 				font-family: $base-font-family-english;
+
+ 				@include text_vertical-center(30px);
+
+				span {
+					color: $base-font-white;
+					font-size: $base-font-size-M;
+				}
+			} 
+
+		}
+
+	}
+
+}
+
+.headerWrap {
+
+	border-bottom: 1px solid $base-color-gray;
+	padding-bottom: $base-spacing-XS;
+	margin-bottom: $base-spacing-S;
+
+	&__title {
+
+		font-size: $base-font-size-XL;
+		display: inline-block;
+		font-weight: normal;
+		color: $base-font-color-dark;
+
+		@include text_vertical-center($base-font-size-XL);
+	}
+ 
+	&__more {
+
+		background-color: $base-color-black;
+		font-family: $base-font-family-english;
+		padding: 2px $base-spacing-XS;
+		display: inline-block;
+		margin-left: 1rem;
+		vertical-align: bottom;
+
+		span {
+
+			color: $base-font-white;
+			border-width: 0 1px;
+			border-color: $base-font-white;;
+			border-style: solid;
+			text-align: center;
+			padding: 0 1rem;
+
+		}
+
+	}
+
+}

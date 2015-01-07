@@ -1,0 +1,57 @@
+.secmenu {
+    border-top: 1px dotted $base-color-gray;
+    border-bottom: 1px dotted $base-color-gray;
+    padding: $base-spacing-S 0;
+    margin-bottom: $base-spacing-S;
+    overflow: hidden;
+
+    li {
+
+        float: left;
+        background:url(../images/icon-sec.jpg) 10px 6px no-repeat;
+        padding-left: 40px;
+        display: block;
+        @include gallery(3 of 12);
+        
+        
+
+        @include _break("mobile") {
+            @include gallery(4 of 4);
+        }
+
+        @include _break("pad") {
+            @include gallery(4 of 8);
+        }
+
+        @include _break("desktop") {
+            @include gallery(2.5 of 10);
+        }
+
+        @include _break("wide") {
+            @include gallery(3 of 12);
+        }
+        
+        &:hover {
+             
+            .secmenu__title a, .secmenu__description a {
+                @include transition();
+                color: $base-color-primary;
+            }
+        }
+    }
+
+    &__title a {
+
+        font-weight: bold;
+        color: $base-font-color-basic;
+        @include full-width-blk;
+    }
+
+    &__description a {
+
+        color: $base-font-color-light;
+        @include full-width-blk;
+
+    }
+
+}

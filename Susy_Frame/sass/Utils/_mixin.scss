@@ -1,24 +1,87 @@
-// css片段
-$all-g:10px;
-
-
-// 文字隱藏
+/* = text-hide --- @include text-hide ---
+------------------------------------------------------------------------------------------ */
 @mixin text-hide() {
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
 }
+
+
+/* = text-long-hide --- @include text-long-hide ---
+------------------------------------------------------------------------------------------ */
 @mixin text-long-hide() {
     white-space: nowrap;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
-    overflow: hidden;
+    overflow: hidden; 
 }
+
+
+/* = social Links icon --- @include socialLinks-icon ---
+------------------------------------------------------------------------------------------ */
 @mixin socialLinks-icon($name) {
     $url:"../images/#{$name}.png";
     background: url($url) 0 0 no-repeat;
-    width: 35px;
-    height: 35px;
+    width: $header-grid;
+    height: $header-grid;
     display: block;
     @include text-hide;
 }
+
+
+/* = 1px solid --- @include solid ---
+------------------------------------------------------------------------------------------ */
+@mixin solid($borderColor: $base-color-gray) {
+    border: 1px solid $borderColor;
+}
+
+
+/* = transition --- @include transition ---
+------------------------------------------------------------------------------------------ */
+@mixin transition ($effect: all) {
+    -webkit-transition: $effect 0.4s ease-out;  /* Saf3.2+, Chrome */
+    -moz-transition: $effect 0.4s ease-out;  /* FF4+ */
+    -o-transition: $effect 0.4s ease-out;  /* Opera 10.5+ */
+    transition: $effect 0.4s ease-out;
+}
+
+
+/* = link transition --- @include base-link ---
+------------------------------------------------------------------------------------------ */
+@mixin base-link( $normal : $base-font-color-dark, $hover : $base-color-primary ) {
+    color: $normal;
+    @include transition();
+    &:hover { color: $hover}
+    
+}
+
+
+/* = Text Vertical Center --- @include text_vertical-center ---
+------------------------------------------------------------------------------------------ */
+@mixin text_vertical-center ($height:1rem) {
+    
+    line-height: $height;
+    height: $height;
+}
+
+
+/* = Move Elements to Top --- @include z-index ---
+------------------------------------------------------------------------------------------ */
+@mixin z-index ($number:1rem) {
+    
+    z-index: 100 + $number;
+}
+
+/* = Full Width Block --- @include full-width-blk ---
+------------------------------------------------------------------------------------------ */
+@mixin full-width-blk () {
+    
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+
