@@ -11,7 +11,7 @@ $susy: (
     columns: 10,
     column-width: 80px,
     gutters: 1 / 4,
-    container: 980px,
+    // container: 980px,
     global-box-sizing: border-box, 
     gutter-position: after,
     last-flow: to,
@@ -48,6 +48,7 @@ $wide_layout : 12;
         @include susy-breakpoint($desktop_break, $desktop_layout)
         {
             @content;
+            background-color: green;
         }
     }
     @else if ($break == "wide")
@@ -55,6 +56,7 @@ $wide_layout : 12;
         @include susy-breakpoint($wide_break, $wide_layout)
         {
             @content;
+            background-color: red;
         }
     }
     

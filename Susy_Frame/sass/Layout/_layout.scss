@@ -3,6 +3,8 @@
 // 框架
 .wrap-wide {
 
+    @include container();
+    
     @include _break("desktop") {
         @include container();
     }
