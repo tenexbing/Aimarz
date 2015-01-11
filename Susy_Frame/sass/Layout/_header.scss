@@ -63,7 +63,7 @@
             margin-left: $base-spacing-S;
         }
     }
-
+ 
     &__icon-fb { @include socialLinks-icon(social01); }
     &__icon-si { @include socialLinks-icon(social02); }
     &__icon-pi { @include socialLinks-icon(social03); }
@@ -134,7 +134,7 @@
     }
 }
 
-
+ 
 /* = cart ---
 ------------------------------------------------------------------------------------------ */
 .cart {

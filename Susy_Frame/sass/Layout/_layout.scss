@@ -1,18 +1,33 @@
 .header { height: $header-height; }
 
 // 框架
-.wrap-wide {
+.wrap-wide { 
 
-    @include _break("desktop") {
-        @include container();
+    @include container();
+
+    @include at-breakpoint($desktop-layout) {
+        @include container();    
+        background-color: orange;
     }
-    @include _break("wide") {
+
+    @include at-breakpoint($wide-layout) {
         @include container();
+        background-color: red;
     }
+
+    @include at-breakpoint($huge-layout) {
+        @include container();
+        background-color: green;
+    }
+
+    background-color: lightBlue;
+    
 }
 
 .wrap-wide { 
     
     position: relative; 
-    
+    @include susy-grid-background;
+
 }
+

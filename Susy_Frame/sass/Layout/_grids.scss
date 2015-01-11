@@ -3,61 +3,22 @@
 // Sass (v3.3.14)
 // Compass (v1.0.1)
 // Breakpoint (v2.5.0)
-// Susy (v2.1.3)
+// Susy (v2.1.3) 
 // ---- 
 
-$susy: (
-    math: static,
-    columns: 10,
-    column-width: 80px,
-    gutters: 1 / 4,
-    container: 980px,
-    global-box-sizing: border-box, 
-    gutter-position: after,
-    last-flow: to,
-    debug: (
-        image: show,
-        color: rgba(#ffedde, .25),
-        output: background,
-        toggle: top right,
-    ),
-    use-custom: (
-        background-image: true,
-        background-options: false,
-        box-sizing: true, 
-        clearfix: false,
-        rem: true,
-    )
-);
+$total-columns: 12;
+$column-width: 60px;
+$gutter-width: 20px;
+$grid-padding: 10px;
 
-$mobile_break  : 320px 1023px;
-$mobile_layout : 8;
+$container-style: static;
+// $container-width: 1400px;
 
-$desktop_break  : 1024px;
-$desktop_layout : 10;
+$desktop-layout: 1180px 12; 
+$wide-layout: 1280px 14 ;
+$huge-layout: 1400px 16 ; 
 
-$wide_break  : 1280px;
-$wide_layout : 12; 
+.contactBlk {
 
-
-@mixin _break($break:desktop)
-{
-
-    @if ($break == "desktop")
-    {
-        @include susy-breakpoint($desktop_break, $desktop_layout)
-        {
-            @content;
-        }
-    }
-    @else if ($break == "wide")
-    {
-        @include susy-breakpoint($wide_break, $wide_layout)
-        {
-            @content;
-        }
-    }
-    
-    // @include container($susy);
-
+	@include container($total-columns, $desktop-layout, $wide-layout, $huge-layout);
 }

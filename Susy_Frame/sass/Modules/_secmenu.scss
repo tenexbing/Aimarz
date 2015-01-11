@@ -11,24 +11,15 @@
         background:url(../images/icon-sec.jpg) 10px 6px no-repeat;
         padding-left: 40px;
         display: block;
-        @include gallery(3 of 12);
+        @include isolate-grid(3, 12);
         
-        
 
-        @include _break("mobile") {
-            @include gallery(4 of 4);
+        @include at-breakpoint($desktop-layout) {
+            @include isolate-grid(3, 12);
         }
 
-        @include _break("pad") {
-            @include gallery(4 of 8);
-        }
-
-        @include _break("desktop") {
-            @include gallery(2.5 of 10);
-        }
-
-        @include _break("wide") {
-            @include gallery(3 of 12);
+        @include at-breakpoint($wide-layout) {
+            @include isolate-grid(3, 15);
         }
         
         &:hover {

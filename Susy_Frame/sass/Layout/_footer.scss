@@ -16,7 +16,7 @@
     .footerLinks {
 
         margin-top: $colum-spaceing-vertical;
-        @include span(2);
+        @include columns(2);
 
         dt {
 
@@ -42,7 +42,7 @@
 
     .subContent {
 
-        @include span(last 6);
+        @include columns(last 6);
         
     }
     
@@ -124,7 +124,7 @@
                 overflow: hidden;
                 position: relative;
 
-                @include span(3);
+                @include columns(3);
 
                 h4, p {
                      
@@ -138,7 +138,7 @@
                 overflow: hidden;
                 position: relative;
 
-                @include span(last 3);
+                @include columns(last 3);
 
                 h4, p {
                     
@@ -157,7 +157,7 @@
         font-size: $base-font-size-S;
         margin-bottom: $base-spacing-L;
 
-        @include full; 
+        // @include full; 
     }
 }
 
