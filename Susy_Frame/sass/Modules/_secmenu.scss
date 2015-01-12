@@ -11,16 +11,7 @@
         background:url(../images/icon-sec.jpg) 10px 6px no-repeat;
         padding-left: 40px;
         display: block;
-        @include isolate-grid(3, 12);
-        
-
-        @include at-breakpoint($desktop-layout) {
-            @include isolate-grid(3, 12);
-        }
-
-        @include at-breakpoint($wide-layout) {
-            @include isolate-grid(3, 15);
-        }
+        width: 25%;
         
         &:hover {
              

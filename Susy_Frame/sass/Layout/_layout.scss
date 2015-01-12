@@ -3,31 +3,25 @@
 // 框架
 .wrap-wide { 
 
-    @include container();
-
-    @include at-breakpoint($desktop-layout) {
-        @include container();    
-        background-color: orange;
+    @include breakpoint($tide-screen){
+        width: 980px;
+        // background-color: blue;
     }
-
-    @include at-breakpoint($wide-layout) {
-        @include container();
-        background-color: red;
+    @include breakpoint($basic-screen){
+        width: 1020px;
+        // background-color: green;
     }
-
-    @include at-breakpoint($huge-layout) {
-        @include container();
-        background-color: green;
+    @include breakpoint($wide-screen){
+        width: 1140px;
+        // background-color: orange;
     }
-
-    background-color: lightBlue;
+    @include breakpoint($huge-screen){
+        width: 1280px;
+        // background-color: red;
+    }
     
 }
-
 .wrap-wide { 
-    
-    position: relative; 
-    @include susy-grid-background;
-
+    position: relative;
+    margin: 0 auto;
 }
-

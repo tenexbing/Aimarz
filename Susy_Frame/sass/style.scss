@@ -1,9 +1,9 @@
 /*  Compass */
 @import "compass";
 @import "compass/css3";
-@import "susyone";
+
 // @import "breakpoint"; 
-// @import "../bower_components/breakpoint-sass/stylesheets/breakpoint"; 
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint"; 
 
 /* Utils */ 
 @import "Utils/_mixin";  

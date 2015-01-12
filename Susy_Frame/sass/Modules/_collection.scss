@@ -2,12 +2,12 @@
 
 	margin-bottom: $base-spacing-XL;
 
-	&__list {
+	ul {
 		
 		margin-right: -$collection-gap;
 		overflow: hidden;
 
-		&__item {
+		.item {
 
 			float: left;
 			margin-right: $collection-gap;
@@ -88,11 +88,8 @@
 					font-size: $base-font-size-M;
 				}
 			} 
-
 		}
-
 	}
-
 }
 
 .headerWrap {

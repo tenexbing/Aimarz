@@ -1,10 +1,14 @@
 .footer-bg {
 
      background-color: $base-color-black;
+
 }
 
 .footer {
 
+    padding-bottom: $copyright-height;
+    overflow: hidden;
+    
     .footer__title {
 
         color: $base-font-white;
@@ -16,8 +20,12 @@
     .footerLinks {
 
         margin-top: $colum-spaceing-vertical;
-        @include columns(2);
-
+        width: 25%;
+        float: left;
+        width: red;
+        overflow: hidden;
+        position: relative;
+        
         dt {
 
             font-family: $base-font-family-english;
@@ -42,18 +50,21 @@
 
     .subContent {
 
-        @include columns(last 6);
+        width: 40%;
+        float: left;
         
     }
     
     .pre {
 
-        @include pre(1); 
+        margin-left: 8%;
+        width: 20%;
     }
 
     .paper {
 
         margin-top: $colum-spaceing-vertical;
+        width: 100%;
 
         &__email {
          
@@ -91,15 +102,22 @@
 
     .ect {
 
-        margin-top: $colum-spaceing-vertical;
-        
+        .footer__title {
 
+                margin-top: $colum-spaceing-vertical;
+        }
 
-        &__box {
+        .ect__box {
+
+            overflow: hidden;
+            position: relative;
+            width: 40%;
+            float: left;
 
             &__pic {
                 
                 float: left;
+                width: $grCode-img-width;
             }
 
             &__title {
@@ -118,33 +136,11 @@
                 height: $box-text-height;
                 color: $base-font-white;
             }
- 
-            &-Line {
 
-                overflow: hidden;
-                position: relative;
-
-                @include columns(3);
-
-                h4, p {
-                     
-                    left: $Line-img-width + $base-spacing-S;
+            h4, p {
                     
-                }
-            } 
- 
-            &-qrCode {
-                
-                overflow: hidden;
-                position: relative;
-
-                @include columns(last 3);
-
-                h4, p {
+                left: $grCode-img-width + $base-spacing-S;
                     
-                    left: $grCode-img-width + $base-spacing-S;
-                    
-                }
             }
         }
     }
@@ -155,7 +151,10 @@
         text-align: right;
         font-family: $base-font-family-english;
         font-size: $base-font-size-S;
-        margin-bottom: $base-spacing-L;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        @include text_vertical-center($copyright-height);
 
         // @include full; 
     }

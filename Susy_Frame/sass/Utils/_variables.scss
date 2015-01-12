@@ -19,14 +19,14 @@ $base-font-family-english: Arial, Helvetica, sans-serif;
 /* = FONT SIZE ---
 ------------------------------------------------------------------------------------------ */
 // BODY FONT SIZE : 12px //
-// font-size-Small:  11px = 16px * 0.69
-// font-size-Medium: 12px = 16px * 0.75
-// font-size-Large:  15px = 16px * 0.94
-// font-size-XL  : 	25px = 16px * 1.56
-$base-font-size-S : 0.69rem;
-$base-font-size-M : 0.75rem;
-$base-font-size-L : 0.94rem;
-$base-font-size-XL  : 1.56rem;
+// font-size-Small:  11px = 12px * 0.92
+// font-size-Medium: 12px = 12px * 1
+// font-size-Large:  15px = 12px * 1.25
+// font-size-XL  : 	25px = 12px * 2.08
+$base-font-size-S : 0.92rem;
+$base-font-size-M : 1rem;
+$base-font-size-L : 1.25rem;
+$base-font-size-XL  : 2.08rem;
 
 /* = FONT COLOR ---
 ------------------------------------------------------------------------------------------ */
@@ -50,8 +50,8 @@ $base-color-tertiary  : #eb6100;
 /* = FOOTER ---
 ------------------------------------------------------------------------------------------ */
 $footer-base-color: #a0a0a0;
-// font-size-XL  : 	18px = 16px * 1.13
-$footerlink-title-size: 1.13rem;
+// font-size-XL  : 	18px = 12px * 1.5
+$footerlink-title-size: 1.5rem;
 $colum-spaceing-vertical: $base-spacing-XL;
 $grCode-img-width: 73px; 
 $Line-img-width: 50px;
@@ -93,11 +93,12 @@ $submenu-grid-height-XL   : 35px;
 ------------------------------------------------------------------------------------------ */
 
 $collection-gap: 4%;
-$collection-huge-number: 1.13rem;
+$collection-huge-number: 1.5rem;
 $collection-row-item-sum: 4;
-//20px = 16px * 1.25
-$discount-font-size: 1.25rem;
+//20px = 12px * 1.67
+$discount-font-size: 1.67rem;
 $viewDetail-size: 55px;
+$copyright-height: 75px;
 $collrction-item-width: (100% - ($collection-gap * $collection-row-item-sum)) /$collection-row-item-sum ;
 
 
