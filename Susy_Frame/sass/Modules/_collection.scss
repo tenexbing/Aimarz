@@ -27,19 +27,23 @@
 
 			&__img { width: 100%; }
 
-			&__info {
+			.info-text {
 
 				color: $base-color-primary;
+			}
 
-				&-number { font-size: $collection-huge-number; }
+			.info-number { 
 
-				&-price {
+				font-size: $collection-huge-number;
+				color: $base-color-primary;
+			}
 
-					color: $base-font-color-light;
-					text-decoration: line-through;
-					margin-left: $base-spacing-S; 
-					font-family: $base-font-family-english;
-				}
+			.info-price {
+
+				color: $base-font-color-light;
+				text-decoration: line-through;
+				margin-left: $base-spacing-S; 
+				font-family: $base-font-family-english;
 			}
 
 			&__viewDetail {

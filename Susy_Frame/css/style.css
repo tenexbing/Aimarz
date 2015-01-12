@@ -999,15 +999,16 @@ p {
             color: #e6287c; }
       .collection ul .item__img {
         width: 100%; }
-      .collection ul .item__info {
+      .collection ul .item .info-text {
         color: #e6287c; }
-        .collection ul .item__info-number {
-          font-size: 1.5rem; }
-        .collection ul .item__info-price {
-          color: #b5b5b5;
-          text-decoration: line-through;
-          margin-left: 10px;
-          font-family: Arial, Helvetica, sans-serif; }
+      .collection ul .item .info-number {
+        font-size: 1.5rem;
+        color: #e6287c; }
+      .collection ul .item .info-price {
+        color: #b5b5b5;
+        text-decoration: line-through;
+        margin-left: 10px;
+        font-family: Arial, Helvetica, sans-serif; }
       .collection ul .item__viewDetail {
         background-color: #D7D2D2;
         color: #ffffff;
